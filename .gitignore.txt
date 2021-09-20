@@ -16,6 +16,9 @@ ipython_config.py
 # Remove previous ipynb_checkpoints
 #   git rm -r .ipynb_checkpoints/
 
+### real coding test ###
+codingTest
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
