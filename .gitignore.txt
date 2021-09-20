@@ -18,6 +18,7 @@ ipython_config.py
 
 ### real coding test ###
 codingTest
+codingTest/*
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
