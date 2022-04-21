@@ -12,7 +12,7 @@ import kotlin.math.abs
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-val st = StringTokenizer(readLine())
+private val st = StringTokenizer(readLine())
 
 fun available(x1: Int, y1: Int, x2: Int, y2: Int, x3: Int, y3: Int) =
     (x1 - x2) * (y1 - y3) != (y1 - y2) * (x1 - x3)
