@@ -5,7 +5,7 @@
 class Solution {
     fun solution(id_list: Array<String>, report: Array<String>, k: Int): IntArray {
 
-        val history = id_list.map{it to mutableSetOf<String>()}.toMap()
+        val history = id_list.map { it to mutableSetOf<String>() }.toMap()
 
         // history = 신고 당한 유저 to [신고 한 유저 목록]
         for (info in report) {
@@ -14,16 +14,16 @@ class Solution {
         }
         // history에서 k번 이상 신고 당한 유저
         val banned = history.filterValues { it.size >= k }
-        var reporter: MutableMap<String, Int> = id_list.map { it to 0 }.toMap().toMutableMap()
+        val reporter: MutableMap<String, Int> = id_list.map { it to 0 }.toMap().toMutableMap()
 
         // reporter = 정지 된 유저를 신고한 횟수 세기
-        banned.forEach {(k, v) -> v.forEach {
-            reporter.plusAssign(it to reporter[it]!!+1)
-        }}
+        banned.forEach { (k, v) ->
+            v.forEach {
+                reporter.plusAssign(it to reporter[it]!! + 1)
+            }
+        }
 
         // 신고 횟수만 저장
-        var answer = reporter.values.toIntArray()
-
-        return answer
+        return reporter.values.toIntArray()
     }
 }
