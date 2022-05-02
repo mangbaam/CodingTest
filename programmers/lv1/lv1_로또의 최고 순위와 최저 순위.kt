@@ -6,7 +6,7 @@ package programmers.lv1
 
 import kotlin.math.*
 
-class Solution {
+class Solution77484 {
     fun solution(lottos: IntArray, win_nums: IntArray): IntArray {
         val zeros = lottos.count {it == 0}
         val matches = lottos.toSet().intersect(win_nums.toSet()).size

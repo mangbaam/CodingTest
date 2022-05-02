@@ -2,7 +2,7 @@
  * https://programmers.co.kr/learn/courses/30/lessons/92334
  * */
 
-class Solution {
+class Solution92334 {
     fun solution(id_list: Array<String>, report: Array<String>, k: Int): IntArray {
 
         val history = id_list.map { it to mutableSetOf<String>() }.toMap()
