@@ -2,6 +2,8 @@
 프로그래머스, 백준 등 코딩테스트 풀이를 기록하는 저장소입니다.
 *python-for-coding-test*는 나동빈 저자의 **이것이 취업을 위한 코딩테스트다** 책의 문제 풀이입니다.
 
+> 백준/{level}/... 은 [백준허브](https://github.com/BaekjoonHub/BaekjoonHub)에 의해 자동으로 업로드 되는 디렉터리입니다
+
 ## About repository
 ### 개발 언어 및 환경
 - 파이썬 -> jupyter notebook (대부분)
