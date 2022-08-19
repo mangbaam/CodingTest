@@ -1,3 +1,8 @@
+import sys
+
+def input():
+    return sys.stdin.readline().rstrip()
+
 c = lambda x: x * (x - 1) // 2
 
 n, m = map(int, input().split())
