@@ -12,7 +12,6 @@ direct = {
     '2': [(-1, 0), (0, 1)],
     '3': [(-1, 0), (0, -1)],
     '4': [(0, -1), (1, 0)],
-    'M': [],
     'Z': []
 }
 
@@ -21,12 +20,14 @@ def bfs(start):
     visited[start[0]][start[1]] = True
     q = deque()
 
+    # 시작 파이프 찾기
     for x, y in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
         nx, ny = start[0] + x, start[1] + y
         if nx in range(r) and ny in range(c) and arr[nx][ny] != '.':
             visited[nx][ny] = True
             q.append((nx, ny))
 
+    # 탐색 시작
     while q:
         cx, cy = q.popleft()
         if arr[cx][cy] == '.':
@@ -40,13 +41,15 @@ def bfs(start):
 r, c = map(int, input().split())
 arr = [list(input()) for _ in range(r)]
 
-# find M, Z
+# find M
+found = False
 for i in range(r):
     for j in range(c):
         if arr[i][j] == 'M':
             M = (i, j)
-        if arr[i][j] == 'Z':
-            Z = (i, j)
+            found = True
+            break
+    if found: break
 
 mx, my = bfs(M)
 
