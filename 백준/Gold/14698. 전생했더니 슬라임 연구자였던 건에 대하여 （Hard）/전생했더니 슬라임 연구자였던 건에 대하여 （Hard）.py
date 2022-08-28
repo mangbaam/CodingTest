@@ -1,6 +1,6 @@
-import sys, heapq
-
 MOD = 1_000_000_007
+
+import sys
 
 def input():
     return sys.stdin.readline().rstrip()
@@ -8,10 +8,10 @@ def input():
 for _ in range(int(input())):
     n = int(input())
     slimes = list(map(int, input().split()))
-    heapq.heapify(slimes)
     energy = 1
     while len(slimes) > 1:
-        e = heapq.heappop(slimes) * heapq.heappop(slimes)
-        heapq.heappush(slimes, e)
+        slimes.sort(reverse=True)
+        e = slimes.pop() * slimes.pop()
+        slimes.append(e)
         energy = (energy * e) % MOD
     print(energy % MOD)
