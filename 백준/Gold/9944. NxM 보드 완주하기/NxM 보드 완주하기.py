@@ -33,7 +33,6 @@ def rec_fun(x, y, count):
 while True:
     try:
         N, M = map(int, input().split())
-        visited = [[False] * M for _ in range(N)]
         board = [list(input()) for _ in range(N)]
         answer = INF
         for i in range(N):
